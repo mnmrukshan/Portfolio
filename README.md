@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Mohamed Rukshan - Portfolio Website
 
-## Getting Started
+This is a high-performance personal portfolio built with Next.js, Tailwind CSS, and Framer Motion.
 
-First, run the development server:
+## How to View Your Portfolio
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+To see your website locally on your computer, follow these simple steps:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1.  **Open your terminal** (Command Prompt, PowerShell, or the terminal inside VS Code).
+2.  **Ensure you are in the project folder**: `d:\Projects\Portfolio`.
+3.  **Run the development server**:
+    ```bash
+    npm run dev
+    ```
+4.  **Open your browser**: Go to [http://localhost:3000](http://localhost:3000).
+5.  **Stop the server**: When you are finished, go back to your terminal and press `Ctrl + C` (then type `Y` if prompted).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Details & Images
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### How to Add Your Project Screenshots
+To replace the placeholder images with your actual project screenshots:
 
-## Learn More
+1.  **Prepare your images**: Save your project screenshots as `.jpg` or `.png` files.
+2.  **Create the directory**: Ensure there is a folder at `public/projects/`.
+3.  **Save the files**: Place your images in that folder and name them as follows (matching the names in `src/data/portfolio.ts`):
+    - `pathai.jpg`
+    - `waygo.jpg`
+    - `mrstores.jpg`
+    - `mrride.jpg`
+    - `food.jpg`
+4.  **Automatic Update**: The website will automatically detect these files and display them in the project cards.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+## Project Features
+- **Matte Black Aesthetic**: Strictly neutral, deep black theme optimized for eye comfort.
+- **Subtle Interactions**: Clean animations without blinding glows or "shining" effects.
+- **Fast & Responsive**: Optimized for all devices and browsers.
