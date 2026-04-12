@@ -35,7 +35,7 @@ export default function Navbar() {
         <div className={`glass mx-auto max-w-5xl px-6 py-3 flex items-center justify-between transition-all duration-300 ${
           scrolled ? "bg-white/10" : "bg-transparent border-transparent"
         }`}>
-          <Link href="#home" className="text-xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+          <Link href="#home" className="text-xl font-bold bg-gradient-to-r from-[#00D2FF] to-[#0077b6] bg-clip-text text-transparent">
             MR.
           </Link>
 
@@ -52,7 +52,7 @@ export default function Navbar() {
             ))}
             <Link
               href="#contact"
-              className="px-5 py-2 glass hover:bg-white/20 transition-all text-sm font-semibold"
+              className="px-5 py-2 glass hover:bg-[#00D2FF]/20 hover:border-[#00D2FF]/30 hover:shadow-[0_0_15px_rgba(0,210,255,0.2)] transition-all text-sm font-semibold"
             >
               Hire Me
             </Link>

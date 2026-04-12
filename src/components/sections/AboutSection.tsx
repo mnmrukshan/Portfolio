@@ -24,15 +24,15 @@ export default function AboutSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <GlassCard className="p-8 leading-relaxed text-foreground/80 text-lg">
-              <p className="mb-6">
-                I am a 3rd-year <span className="text-primary font-semibold">Software Engineering Undergraduate</span> with hands-on experience in software design, coding, and collaborative projects.
+            <GlassCard className="p-10 leading-relaxed text-foreground/80 text-lg border-primary/5">
+              <p className="mb-8">
+                I am a 3rd-year <span className="font-bold text-foreground">Software Engineering Undergraduate</span> with hands-on experience in software design, coding, and collaborative projects.
               </p>
-              <p className="mb-6">
+              <p className="mb-8 font-normal text-foreground/70">
                 I have developed strong problem-solving and technical skills through multiple real-world projects, ranging from AI-powered systems to full-stack e-commerce platforms.
               </p>
-              <p>
-                I am actively seeking an <span className="text-secondary font-semibold">internship opportunity</span> to apply my knowledge in real-world software development and contribute to innovative solutions that make a difference.
+              <p className="text-foreground/80">
+                Currently, I am actively seeking an <span className="text-primary font-bold">internship opportunity</span> to apply my knowledge in real-world software development and contribute to innovative solutions.
               </p>
             </GlassCard>
           </motion.div>

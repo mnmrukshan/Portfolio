@@ -1,8 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail, Phone, Github, Linkedin, Instagram, Facebook } from "lucide-react";
+import { Mail, Phone, Github, Linkedin, Instagram, Facebook, Loader2, CheckCircle2, XCircle } from "lucide-react";
 import GlassCard from "../GlassCard";
+import { useState } from "react";
 
 const socialLinks = [
   { name: "GitHub", href: "https://github.com/mnmrukshan", icon: <Github size={20} /> },
@@ -12,6 +13,42 @@ const socialLinks = [
 ];
 
 export default function ContactSection() {
+  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus("loading");
+    setErrorMessage("");
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setStatus("success");
+        setFormData({ name: "", email: "", message: "" });
+        setTimeout(() => setStatus("idle"), 5000);
+      } else {
+        setStatus("error");
+        setErrorMessage(data.message || "Failed to send message");
+      }
+    } catch (error) {
+      setStatus("error");
+      setErrorMessage("An unexpected error occurred. Please try again.");
+    }
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
   return (
     <section id="contact" className="py-24 px-6 relative">
       <div className="max-w-6xl mx-auto">
@@ -82,11 +119,15 @@ export default function ContactSection() {
             viewport={{ once: true }}
           >
             <GlassCard className="p-8">
-              <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+              <form className="space-y-6" onSubmit={handleSubmit}>
                 <div className="space-y-2">
                   <label className="text-sm font-medium text-foreground/70 ml-1">Your Name</label>
                   <input
                     type="text"
+                    name="name"
+                    required
+                    value={formData.name}
+                    onChange={handleChange}
                     className="w-full px-4 py-3 glass bg-white/5 border-white/10 focus:border-primary/50 focus:ring-1 focus:ring-primary/50 outline-none transition-all"
                     placeholder="Enter your name"
                   />
@@ -95,6 +136,10 @@ export default function ContactSection() {
                   <label className="text-sm font-medium text-foreground/70 ml-1">Your Email</label>
                   <input
                     type="email"
+                    name="email"
+                    required
+                    value={formData.email}
+                    onChange={handleChange}
                     className="w-full px-4 py-3 glass bg-white/5 border-white/10 focus:border-primary/50 focus:ring-1 focus:ring-primary/50 outline-none transition-all"
                     placeholder="Enter your email"
                   />
@@ -103,15 +148,50 @@ export default function ContactSection() {
                   <label className="text-sm font-medium text-foreground/70 ml-1">Message</label>
                   <textarea
                     rows={4}
+                    name="message"
+                    required
+                    value={formData.message}
+                    onChange={handleChange}
                     className="w-full px-4 py-3 glass bg-white/5 border-white/10 focus:border-primary/50 focus:ring-1 focus:ring-primary/50 outline-none transition-all resize-none"
-                    placeholder="Tell me about your project..."
+                    placeholder="Write your message here..."
                   />
                 </div>
+                
+                {status === "success" && (
+                  <motion.div 
+                    initial={{ opacity: 0, scale: 0.9 }} 
+                    animate={{ opacity: 1, scale: 1 }}
+                    className="flex items-center gap-2 p-4 rounded-lg bg-green-500/10 border border-green-500/20 text-green-500 text-sm"
+                  >
+                    <CheckCircle2 size={18} />
+                    <span>Message sent successfully! I'll get back to you soon.</span>
+                  </motion.div>
+                )}
+
+                {status === "error" && (
+                  <motion.div 
+                    initial={{ opacity: 0, scale: 0.9 }} 
+                    animate={{ opacity: 1, scale: 1 }}
+                    className="flex items-center gap-2 p-4 rounded-lg bg-red-500/10 border border-red-500/20 text-red-500 text-sm"
+                  >
+                    <XCircle size={18} />
+                    <span>{errorMessage}</span>
+                  </motion.div>
+                )}
+
                 <button
                   type="submit"
-                  className="w-full py-4 glass bg-white/5 hover:bg-white/10 hover:border-white/20 text-white font-bold transition-all"
+                  disabled={status === "loading"}
+                  className="w-full py-4 glass bg-white/5 hover:bg-white/10 hover:border-white/20 text-white font-bold transition-all flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  Send Message
+                  {status === "loading" ? (
+                    <>
+                      <Loader2 size={20} className="animate-spin" />
+                      Sending...
+                    </>
+                  ) : (
+                    "Send Message"
+                  )}
                 </button>
               </form>
             </GlassCard>

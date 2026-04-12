@@ -5,7 +5,7 @@ import { skills } from "@/data/portfolio";
 
 export default function SkillsSection() {
   return (
-    <section id="skills" className="py-24 px-6 relative overflow-hidden bg-black">
+    <section id="skills" className="py-24 px-6 relative overflow-hidden bg-background">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

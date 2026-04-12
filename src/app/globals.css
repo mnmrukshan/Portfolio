@@ -3,14 +3,15 @@
 @theme {
   --color-glass-bg: rgba(255, 255, 255, 0.03);
   --color-glass-border: rgba(255, 255, 255, 0.08);
-  --color-primary: #f9fafb; /* White for better contrast on Black */
-  --color-secondary: #94a3b8; /* Slate gray */
-  --color-accent: #ffffff;
+  --color-primary: #00D2FF; /* cyan for 'Jacob' style */
+  --color-secondary: #005f73; /* matching teal/blue */
+  --color-accent: #00D2FF;
 }
 
 :root {
-  --background: #000000;
+  --background: #010B13; /* Deep midnight navy */
   --foreground: #f9fafb;
+  --primary: #00D2FF;
 }
 
 body {
@@ -35,21 +36,29 @@ body {
     box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.8);
   }
 
+  .cyan-glow {
+    box-shadow: 0 0 20px rgba(0, 210, 255, 0.3);
+  }
+
+  .cyan-border {
+    border: 1px solid rgba(0, 210, 255, 0.2);
+  }
+
   /* Simplified interactions without "shining" or glows */
   .hover-subtle {
     transition: all 0.3s ease;
   }
 
   .hover-subtle:hover {
-    border-color: rgba(255, 255, 255, 0.2);
-    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(0, 210, 255, 0.4);
+    background: rgba(0, 210, 255, 0.05);
     transform: translateY(-2px);
   }
 }
 
 /* Subtle, dark background animation */
 .bg-gradient-animate {
-  background: radial-gradient(circle at 50% 50%, #080808 0%, #000000 100%);
+  background: radial-gradient(circle at 50% 50%, #001219 0%, #000000 100%);
   background-size: 200% 200%;
   animation: gradient-move 20s ease infinite;
 }
