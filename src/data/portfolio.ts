@@ -1,41 +1,41 @@
 export const projects = [
   {
     id: 1,
-    title: "PathAI – Career Architect System",
-    description: "An AI-powered career roadmap platform that helps students generate personalized career paths based on skills and goals.",
-    tech: ["Python", "TypeScript", "AI", "Gemini"],
+    title: "PathAI – AI-Powered Career Architect",
+    description: "An intelligent platform leveraging Generative AI to analyze skill sets and generate personalized professional roadmaps and learning paths.",
+    tech: ["Next.js", "TypeScript", "FastAPI", "OpenAI API", "Tailwind CSS"],
     github: "https://github.com/mnmrukshan/PathAi-Career-Architect",
     image: "/projects/pathai.jpg"
   },
   {
     id: 2,
-    title: "WayGo – Smart Bus Tracking",
-    description: "A smart transport system for real-time bus tracking, ticketing, and travel management using Flutter and Firebase.",
-    tech: ["Flutter", "Firebase", "APIs"],
+    title: "WayGo – Smart Bus Tracking & E-Ticketing",
+    description: "A smart mobile application with real-time tracking and digital ticketing for admins, drivers, and passengers to streamline public transit.",
+    tech: ["Flutter", "Dart", "Node.js", "MongoDB", "Google Maps", "Firebase", "Socket.io"],
     github: "https://github.com/SanmuganathanLathusan/bus_tracker",
     image: "/projects/waygo.jpg"
   },
   {
     id: 3,
-    title: "MR Stores – E-commerce Fashion",
-    description: "A full-stack e-commerce platform for men's fashion with cart, authentication, and admin features.",
-    tech: ["MongoDB", "Express", "React", "Node.js"],
+    title: "MR Stores – Full-Stack E-Commerce",
+    description: "A modern full-stack e-commerce platform featuring secure authentication, an admin dashboard, and real-time order tracking.",
+    tech: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT", "Tailwind CSS"],
     github: "https://github.com/mnmrukshan/mr-stores-ecommerce",
     image: "/projects/mrstores.jpg"
   },
   {
     id: 4,
     title: "MR Ride – Vehicle Rental System",
-    description: "A vehicle rental management system allowing users to rent vehicles and admins to handle bookings.",
-    tech: ["MERN Stack", "Express", "React"],
+    description: "A vehicle booking ecosystem with real-time availability checks and a centralized Admin dashboard for efficient fleet management.",
+    tech: ["React", "Node.js", "Express.js", "MongoDB", "Cloudinary API", "Context API"],
     github: "https://github.com/mnmrukshan/MR-Ride",
     image: "/projects/mrride.jpg"
   },
   {
     id: 5,
-    title: "Food Ordering Website",
-    description: "A full-stack food ordering platform with browsing, cart, and order tracking capabilities.",
-    tech: ["MERN Stack", "Node.js", "React"],
+    title: "Digital Food Ordering System",
+    description: "A digital marketplace with menu browsing, order tracking, and a full-featured Admin Panel to manage orders across all devices.",
+    tech: ["React", "Node.js", "Express.js", "MongoDB", "Stripe API", "JWT"],
     github: "https://github.com/mnmrukshan/web_project",
     image: "/projects/food.jpg"
   }
@@ -60,4 +60,9 @@ export const skills = [
   { name: "GitHub", icon: "github" },
   { name: "VS Code", icon: "vscode" },
   { name: "Figma", icon: "figma" }
+];
+export const languages = [
+  { name: "English" },
+  { name: "Sinhala" },
+  { name: "Tamil" }
 ];
