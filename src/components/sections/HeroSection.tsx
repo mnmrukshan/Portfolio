@@ -51,7 +51,7 @@ export default function HeroSection() {
               View Projects <ArrowRight size={20} />
             </Link>
             <button
-              onClick={() => window.open('/mycv.pdf', '_blank')}
+              onClick={() => window.open('/Mohamed Rukshan_CV.pdf', '_blank')}
               className="w-full sm:w-auto px-8 py-4 glass hover:bg-white/10 transition-all flex items-center justify-center gap-2 font-bold group border-white/5"
             >
               <Download size={20} className="group-hover:translate-y-0.5 transition-transform" /> Download CV

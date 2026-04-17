@@ -90,11 +90,11 @@ export default function AboutSection() {
                   whileHover={{ y: -5, scale: 1.05 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1, type: "spring", stiffness: 100 }}
-                  className="px-6 py-3 rounded-2xl bg-white/5 border border-white/10 glass hover:border-primary/30 transition-all group relative overflow-hidden flex-1 min-w-[120px]"
+                  className="px-5 py-2.5 rounded-2xl bg-white/5 border border-white/10 glass hover:border-primary/30 transition-all group relative overflow-hidden"
                 >
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                   <div className="relative flex flex-col items-center">
-                    <span className="text-foreground font-bold tracking-wide">{lang.name}</span>
+                    <span className="text-foreground font-semibold tracking-wide text-sm">{lang.name}</span>
                   </div>
                 </motion.div>
               ))}

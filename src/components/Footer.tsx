@@ -79,7 +79,7 @@ export default function Footer() {
 
         <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-6 text-[10px] uppercase font-bold tracking-widest text-foreground/20">
           <p className="text-foreground/30">
-            © {currentYear} Mohamed Rukshan • Designed with Integrity
+            © {currentYear} Mohamed Rukshan
           </p>
           
           <div className="hidden md:block text-foreground/10">
