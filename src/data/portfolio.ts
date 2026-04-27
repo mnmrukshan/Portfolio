@@ -38,6 +38,14 @@ export const projects = [
     tech: ["React", "Node.js", "Express.js", "MongoDB", "Stripe API", "JWT"],
     github: "https://github.com/mnmrukshan/web_project",
     image: "/projects/food.jpg"
+  },
+  {
+    id: 6,
+    title: "Hybrid Mobile-Based Student Attendance System (Ongoing Group Project)",
+    description: "A secure attendance ecosystem featuring QR code verification, face recognition, and GPS-based geofencing to ensure academic integrity and eliminate proxy attendance.",
+    tech: ["React Native", "Node.js", "Express.js", "MongoDB", "Python", "OpenCV"],
+    github: "https://github.com/SE6101-Community-Project/Student_Attendance_System",
+    image: "/projects/attendance.png"
   }
 ];
 
