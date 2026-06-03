@@ -31,10 +31,10 @@ export default function HeroSection() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="text-lg sm:text-xl md:text-2xl text-foreground/70 mb-8 max-w-xl lg:mx-0 mx-auto font-medium"
           >
-            Software Engineering Undergraduate (3rd Year)
+            Software Engineering Undergraduate at SUSL
             <br />
             <span className="text-foreground/50 text-lg block mt-2">
-              "I build modern full-stack web applications and AI-powered systems"
+              "Building scalable full-stack web, mobile, and AI-integrated systems"
             </span>
           </motion.p>
 

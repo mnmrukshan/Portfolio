@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import GlassCard from "../GlassCard";
 import { languages } from "@/data/portfolio";
+import { Rocket, Lightbulb, Users } from "lucide-react";
 
 export default function AboutSection() {
   return (
@@ -29,10 +30,10 @@ export default function AboutSection() {
           <GlassCard className="p-6 md:p-10 border-primary/5">
             <div className="space-y-6 text-foreground/80 text-lg leading-[1.8] text-left">
               <p>
-                I am a dedicated 3rd-year <span className="font-bold text-foreground">Software Engineering undergraduate</span> who is specialized in building scalable web, AI, and mobile applications using React.js, the MERN stack, Next.js, Flutter, and Python. I focus on creating user-centered solutions through modern technologies and collaborative problem-solving.
+                I am a <span className="font-bold text-foreground">Software Engineering undergraduate</span> with hands-on experience in full-stack web and cross-platform mobile development. I specialize in building AI-integrated, real-time, and scalable systems using React.js, Next.js, Node.js, React Native, Flutter, and Python.
               </p>
               <p className="font-normal text-foreground/70">
-                With a solid experience in developing real-world systems, including various e-commerce platforms and AI-powered applications, I am currently seeking a professional <span className="text-primary font-bold border-b border-primary/20">internship opportunity</span> to apply my technical skills and contribute to the growth of innovative software development.
+                I have a strong focus on secure API integration and robust application architecture. Passionate about solving real-world challenges through technology, I am eager to drive impact and currently seeking a professional <span className="font-bold text-foreground">Software Engineering Internship</span>.
               </p>
             </div>
           </GlassCard>
@@ -53,9 +54,9 @@ export default function AboutSection() {
             </h3>
             <div className="space-y-6">
               {[
-                { title: "Driven by Innovation", desc: "Focus on AI and modern web technologies.", icon: "🚀" },
-                { title: "Quick Learner", desc: "Adaptable to new tech stacks and methodologies.", icon: "💡" },
-                { title: "Collaborative", desc: "Experienced in team environments and version control.", icon: "🤝" }
+                { title: "Driven by Innovation", desc: "Focus on AI and modern web technologies.", icon: <Rocket className="text-primary" size={24} /> },
+                { title: "Quick Learner", desc: "Adaptable to new tech stacks and methodologies.", icon: <Lightbulb className="text-primary" size={24} /> },
+                { title: "Collaborative", desc: "Experienced in team environments and version control.", icon: <Users className="text-primary" size={24} /> }
               ].map((item, index) => (
                 <div key={index} className="flex gap-4 group">
                   <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-xl group-hover:bg-primary/20 transition-colors">
