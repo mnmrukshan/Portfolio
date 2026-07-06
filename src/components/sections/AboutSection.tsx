@@ -30,10 +30,10 @@ export default function AboutSection() {
           <GlassCard className="p-6 md:p-10 border-primary/5">
             <div className="space-y-6 text-foreground/80 text-lg leading-[1.8] text-left">
               <p>
-                I am a <span className="font-bold text-foreground">Software Engineering undergraduate</span> with hands-on experience in full-stack web and cross-platform mobile development. I specialize in building AI-integrated, real-time, and scalable systems using React.js, Next.js, Node.js, React Native, Flutter, and Python.
+                I am a <span className="font-bold text-foreground">Software Engineering undergraduate</span> with hands-on experience in full-stack web and cross-platform mobile development. I specialize in building scalable, AI-integrated, and real-time systems using Java, Python, Node.js, and TypeScript, alongside modern frameworks like React.js, Next.js, and React Native.
               </p>
               <p className="font-normal text-foreground/70">
-                I have a strong focus on secure API integration and robust application architecture. Passionate about solving real-world challenges through technology, I am eager to drive impact and currently seeking a professional <span className="font-bold text-foreground">Software Engineering Internship</span>.
+                I have a strong focus on secure API integration, enterprise-grade authentication, and robust application architecture, with a growing proficiency in cloud and DevOps technologies such as AWS, Docker, and Kubernetes. Passionate about solving complex real-world challenges through clean code and robust software architecture, I am currently seeking a professional <span className="font-bold text-foreground">Software Engineering Internship</span>.
               </p>
             </div>
           </GlassCard>
