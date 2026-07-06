@@ -36,27 +36,6 @@ export default function ProjectCard({ project, index }: ProjectProps) {
           fill 
           className="object-cover group-hover:scale-105 transition-transform duration-700 opacity-80 group-hover:opacity-100"
         />
-        
-        <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4 flex-col sm:flex-row">
-          <a
-            href={project.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-6 py-2 glass hover:bg-white/10 transition-all text-white font-bold flex items-center gap-2"
-          >
-            <Github size={18} /> GitHub
-          </a>
-          {project.demo && (
-            <a
-              href={project.demo}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-2 glass hover:bg-white/10 transition-all text-[#00D2FF] border-[#00D2FF]/30 hover:border-[#00D2FF]/60 font-bold flex items-center gap-2"
-            >
-              <Play size={18} /> Demo
-            </a>
-          )}
-        </div>
       </div>
 
       <div className="p-6 flex-grow flex flex-col glass bg-white/5 border-t-0 rounded-t-none">
@@ -67,15 +46,38 @@ export default function ProjectCard({ project, index }: ProjectProps) {
           {project.description}
         </p>
         
-        <div className="flex flex-wrap gap-1.5 mt-auto">
-          {project.tech.map((t) => (
-            <span
-              key={t}
-              className="text-[9px] uppercase tracking-wider font-bold px-1.5 py-0.5 glass bg-white/5 text-foreground/70 border-white/10"
+        <div className="mt-auto flex flex-col gap-4">
+          <div className="flex flex-wrap gap-1.5">
+            {project.tech.map((t) => (
+              <span
+                key={t}
+                className="text-[9px] uppercase tracking-wider font-bold px-1.5 py-0.5 glass bg-white/5 text-foreground/70 border-white/10"
+              >
+                {t}
+              </span>
+            ))}
+          </div>
+
+          <div className="flex items-center gap-3 pt-4 border-t border-white/5">
+            <a
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 py-2 glass hover:bg-white/10 transition-all text-white font-bold flex items-center justify-center gap-2 text-xs"
             >
-              {t}
-            </span>
-          ))}
+              <Github size={14} /> GitHub
+            </a>
+            {project.demo && (
+              <a
+                href={project.demo}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 py-2 glass hover:bg-[#00D2FF]/10 transition-all text-[#00D2FF] border-[#00D2FF]/30 hover:border-[#00D2FF]/60 font-bold flex items-center justify-center gap-2 text-xs"
+              >
+                <Play size={14} /> Demo
+              </a>
+            )}
+          </div>
         </div>
       </div>
     </GlassCard>

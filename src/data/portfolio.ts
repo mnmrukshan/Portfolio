@@ -40,6 +40,7 @@ export const projects = [
     description: "A cross-platform mobile application for real-time bus tracking and digital ticket booking. Features live location tracking via Google Maps API and Socket.io, along with seat reservation and e-ticket generation.",
     tech: ["Flutter", "Node.js", "MongoDB", "Socket.io"],
     github: "https://github.com/SanmuganathanLathusan/bus_tracker",
+    demo: "https://youtu.be/xE9zmz-EkJ8",
     image: "/projects/waygo.jpg"
   }
 ];

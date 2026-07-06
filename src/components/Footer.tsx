@@ -10,7 +10,7 @@ export default function Footer() {
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
       
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
+        <div className="flex flex-col md:flex-row justify-between gap-12 md:gap-8 mb-16">
           {/* Identity & Location */}
           <div className="space-y-6 max-w-sm">
             <div>
